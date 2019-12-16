@@ -41,6 +41,17 @@ describe('EscapeService', () => {
       svc.setFlag(EscapeServiceFlagEnum.LEAVE_EXCESS_ESCAPE, true);
       expect(svc.split(sep, 'escAsepB')).toEqual(['escA', 'B']);
     });
+
+    each([
+      ['макакяа', 'а', ['м', 'к', 'ка'], 'я'],
+      ['ключ.а', '.', ['ключ', 'а'], '\\'],
+    ]).it(`'%s'.split('%s') = %s; esc = %s`, (src, sep, expected, esc) => {
+      const svc = new EscapeService(esc);
+
+      const actual = svc.split(sep, src);
+
+      expect(actual).toEqual(expected);
+    });
   });
   describe('should join', () => {
     each([
