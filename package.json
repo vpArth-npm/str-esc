@@ -1,6 +1,6 @@
 {
   "name": "str-esc",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "license": "MIT",
   "description": "String tool can join/split strings with ability to escape separator",
   "main": "build/index.js",
