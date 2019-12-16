@@ -1,10 +1,10 @@
 {
-  "name": "escape",
-  "version": "0.0.1",
+  "name": "str-esc",
+  "version": "1.0.0",
   "license": "MIT",
   "description": "String tool can join/split strings with ability to escape separator",
-  "main": "dist/index.js",
-  "types": "dist/index.d.ts",
+  "main": "build/index.js",
+  "types": "build/index.d.ts",
   "devDependencies": {
     "@types/jest": "^24.0.23",
     "jest": "^24.9.0",
@@ -13,6 +13,7 @@
     "typescript": "^3.7.3"
   },
   "scripts": {
-    "test": "jest"
+    "test": "jest",
+    "build": "tsc --strict"
   }
 }

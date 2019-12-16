@@ -1,5 +1,5 @@
 import each from 'jest-each';
-import { EscapeService } from './service';
+import { EscapeService, EscapeServiceFlagEnum } from './service';
 
 describe('EscapeService', () => {
   describe('should encode', () => {
@@ -34,11 +34,11 @@ describe('EscapeService', () => {
       const svc = new EscapeService('esc');
 
       expect(svc.split(sep, 'AsepBesc')).toEqual(['A', 'Besc']);
-      svc.setFlag(EscapeService.LEAVE_LAST_ESCAPE, false);
+      svc.setFlag(EscapeServiceFlagEnum.LEAVE_LAST_ESCAPE, false);
       expect(svc.split(sep, 'AsepBesc')).toEqual(['A', 'B']);
 
       expect(svc.split(sep, 'escAsepB')).toEqual(['A', 'B']);
-      svc.setFlag(EscapeService.LEAVE_EXCESS_ESCAPE, true);
+      svc.setFlag(EscapeServiceFlagEnum.LEAVE_EXCESS_ESCAPE, true);
       expect(svc.split(sep, 'escAsepB')).toEqual(['escA', 'B']);
     });
   });
