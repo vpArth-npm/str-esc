@@ -45,6 +45,7 @@ describe('EscapeService', () => {
     each([
       ['макакяа', 'а', ['м', 'к', 'ка'], 'я'],
       ['ключ.а', '.', ['ключ', 'а'], '\\'],
+      ['ключ->а', '->', ['ключ', 'а'], '\\'],
     ]).it(`'%s'.split('%s') = %s; esc = %s`, (src, sep, expected, esc) => {
       const svc = new EscapeService(esc);
 

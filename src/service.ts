@@ -65,7 +65,7 @@ export class EscapeService implements EscapeInterface {
     for (const sep of list) {
       parts.push(regQuote(sep));
     }
-    const re = new RegExp(`(${parts.join('|')}|.+?)`, 'ug');
+    const re = new RegExp(`(${parts.join('|')}|.+?)`, 'g');
 
     return input.match(re) as string[];
   }
