@@ -24,7 +24,7 @@ export class EscapeService implements EscapeInterface {
   }
 
   public split(delimiter: string, input: string, limit?: number): string[] {
-    const tokens                = this.tokenize(input, [delimiter]);
+    const tokens = this.tokenize(input, [delimiter]);
     const context: ParseContext = {
       res:  [],
       word: '',
@@ -67,7 +67,7 @@ export class EscapeService implements EscapeInterface {
     }
     const re = new RegExp(`(${parts.join('|')}|.+?)`, 'g');
 
-    return input.match(re) as string[];
+    return input.match(re) as string[] || [];
   }
 
   private processToken(token: string, delimiter: string, contextRef: ParseContext) {
