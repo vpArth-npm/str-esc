@@ -1,5 +1,6 @@
 import each from 'jest-each';
-import { EscapeService, EscapeServiceFlagEnum } from './service';
+import EscapeService from '.';
+import { EscapeServiceFlagEnum } from './service';
 
 describe('EscapeService', () => {
   describe('should encode', () => {
