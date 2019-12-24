@@ -1,6 +1,6 @@
 {
   "name": "@vparth/str-esc",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "license": "MIT",
   "description": "String tool can join/split strings with ability to escape separator",
   "repository": {
